@@ -4,7 +4,18 @@ UGC Lifeboat Local is an offline reference implementation for preserving creator
 
 The project uses deterministic synthetic fixtures. It does not call live platform APIs, does not require production object storage access, and contains no private creator data or credentials.
 
-## Quick Start
+## Problem shape
+
+Offline UGC archive bundler with content-addressed deduplication and signed portable bundles.
+
+## What the harness exercises
+
+- Models the `ugc-lifeboat-local` workflow with deterministic fixtures and seeded failure cases.
+- Turns the core claim in `UGC Lifeboat Local` into explicit gates that can fail a local run.
+- Stores enough `UGC Lifeboat Local` evidence for a reviewer to inspect the decision path.
+- Keeps `ugc-lifeboat-local` offline, reproducible, and independent of hosted services.
+
+## Local workflow
 
 ```bash
 uv sync
@@ -14,22 +25,12 @@ uv run ugc-lifeboat verify-bundle outputs/creator-alba.rrcustomroom
 uv run ugc-lifeboat dashboard
 ```
 
-Run the bulk export simulation:
-
 ```bash
 uv run ugc-lifeboat bulk-export
 uv run ugc-lifeboat verify
 ```
 
-## What It Demonstrates
-
-- Content-addressed packing for room scene blobs, descriptor sets, GLB geometry, prefabs, materials, and thumbnails.
-- Cross-room asset deduplication with measured raw bytes vs unique stored bytes.
-- Portable `.rrcustomroom` bundles with a detached Ed25519 signature and public verification key.
-- Descriptor preservation so archived scene data remains decodable in the future.
-- Static local viewer/dashboard with archive completeness, dedup ratio, and signature verification gates.
-
-## Outputs
+## Review surfaces
 
 - `outputs/<creator>.rrcustomroom`
 - `outputs/archive_manifest.json`
@@ -38,3 +39,14 @@ uv run ugc-lifeboat verify
 - `outputs/dashboard.html`
 - `outputs/demo_pack/`
 
+## Quality checks
+
+```bash
+uv run ruff check .
+uv run pytest -q
+uv run ugc-lifeboat verify
+```
+
+## Repository hygiene
+
+`UGC Lifeboat Local` is built for local reproduction: deterministic inputs enter the run, deterministic evidence comes out, and private data stays outside the repo.
