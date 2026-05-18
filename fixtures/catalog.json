@@ -1,0 +1,31 @@
+{
+  "descriptor": "syntax = proto3; message Room { repeated Instance instances = 1; } message Instance { string prefab_guid = 1; float x = 2; float y = 3; float z = 4; }",
+  "creators": [
+    {"id": "creator-alba", "display_name": "Alba Studio"},
+    {"id": "creator-nova", "display_name": "Nova Builds"}
+  ],
+  "assets": [
+    {"id": "asset-prefab-door", "kind": "prefab", "bytes": 720000, "payload": "door-prefab-v1"},
+    {"id": "asset-prefab-light", "kind": "prefab", "bytes": 610000, "payload": "light-prefab-v1"},
+    {"id": "asset-prefab-platform", "kind": "prefab", "bytes": 980000, "payload": "platform-prefab-v1"},
+    {"id": "asset-material-neon", "kind": "material", "bytes": 380000, "payload": "neon-material-v1"},
+    {"id": "asset-material-stone", "kind": "material", "bytes": 430000, "payload": "stone-material-v1"},
+    {"id": "asset-glb-base", "kind": "glb", "bytes": 1600000, "payload": "base-scene-glb-v1"},
+    {"id": "asset-thumbnail-shared", "kind": "thumbnail", "bytes": 180000, "payload": "shared-thumbnail-v1"}
+  ],
+  "rooms": [
+    {"id": "room-a01", "creator_id": "creator-alba", "name": "Atrium One", "scene_payload": "room-a01 scene graph with maker strokes", "asset_ids": ["asset-prefab-door", "asset-prefab-light", "asset-prefab-platform", "asset-material-neon", "asset-material-stone", "asset-glb-base", "asset-thumbnail-shared"]},
+    {"id": "room-a02", "creator_id": "creator-alba", "name": "Atrium Two", "scene_payload": "room-a02 scene graph with maker strokes", "asset_ids": ["asset-prefab-door", "asset-prefab-light", "asset-prefab-platform", "asset-material-neon", "asset-material-stone", "asset-glb-base", "asset-thumbnail-shared"]},
+    {"id": "room-a03", "creator_id": "creator-alba", "name": "Atrium Three", "scene_payload": "room-a03 scene graph with maker strokes", "asset_ids": ["asset-prefab-door", "asset-prefab-light", "asset-prefab-platform", "asset-material-neon", "asset-material-stone", "asset-glb-base", "asset-thumbnail-shared"]},
+    {"id": "room-a04", "creator_id": "creator-alba", "name": "Atrium Four", "scene_payload": "room-a04 scene graph with maker strokes", "asset_ids": ["asset-prefab-door", "asset-prefab-light", "asset-prefab-platform", "asset-material-neon", "asset-material-stone", "asset-glb-base", "asset-thumbnail-shared"]},
+    {"id": "room-a05", "creator_id": "creator-alba", "name": "Atrium Five", "scene_payload": "room-a05 scene graph with maker strokes", "asset_ids": ["asset-prefab-door", "asset-prefab-light", "asset-prefab-platform", "asset-material-neon", "asset-material-stone", "asset-glb-base", "asset-thumbnail-shared"]},
+    {"id": "room-a06", "creator_id": "creator-alba", "name": "Atrium Six", "scene_payload": "room-a06 scene graph with maker strokes", "asset_ids": ["asset-prefab-door", "asset-prefab-light", "asset-prefab-platform", "asset-material-neon", "asset-material-stone", "asset-glb-base", "asset-thumbnail-shared"]},
+    {"id": "room-a07", "creator_id": "creator-alba", "name": "Atrium Seven", "scene_payload": "room-a07 scene graph with maker strokes", "asset_ids": ["asset-prefab-door", "asset-prefab-light", "asset-prefab-platform", "asset-material-neon", "asset-material-stone", "asset-glb-base", "asset-thumbnail-shared"]},
+    {"id": "room-a08", "creator_id": "creator-alba", "name": "Atrium Eight", "scene_payload": "room-a08 scene graph with maker strokes", "asset_ids": ["asset-prefab-door", "asset-prefab-light", "asset-prefab-platform", "asset-material-neon", "asset-material-stone", "asset-glb-base", "asset-thumbnail-shared"]},
+    {"id": "room-n01", "creator_id": "creator-nova", "name": "Sky Lab One", "scene_payload": "room-n01 scene graph with maker strokes", "asset_ids": ["asset-prefab-light", "asset-prefab-platform", "asset-material-neon", "asset-glb-base", "asset-thumbnail-shared"]},
+    {"id": "room-n02", "creator_id": "creator-nova", "name": "Sky Lab Two", "scene_payload": "room-n02 scene graph with maker strokes", "asset_ids": ["asset-prefab-light", "asset-prefab-platform", "asset-material-neon", "asset-glb-base", "asset-thumbnail-shared"]},
+    {"id": "room-n03", "creator_id": "creator-nova", "name": "Sky Lab Three", "scene_payload": "room-n03 scene graph with maker strokes", "asset_ids": ["asset-prefab-light", "asset-prefab-platform", "asset-material-neon", "asset-glb-base", "asset-thumbnail-shared"]},
+    {"id": "room-n04", "creator_id": "creator-nova", "name": "Sky Lab Four", "scene_payload": "room-n04 scene graph with maker strokes", "asset_ids": ["asset-prefab-light", "asset-prefab-platform", "asset-material-neon", "asset-glb-base", "asset-thumbnail-shared"]}
+  ]
+}
+
